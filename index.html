@@ -7,49 +7,968 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Rahul Acharya | Portfolio</title>
+    <meta name="description"
+          content="Your Name - Software Developer Portfolio">
+
+    <meta name="author"
+          content="Your Name">
+
+    <title>Your Name | Developer Portfolio</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
 
-    <h1>Rahul Acharya</h1>
+<!-- =====================================================
+     PRELOADER
+===================================================== -->
 
-    <h2>Assistant Manager (Systems)</h2>
+<div id="preloader">
 
-    <p>
-        Welcome to my personal portfolio website.
-    </p>
+    <div class="loader-content">
 
-    <h2>About Me</h2>
+        <div class="loader-logo">
+            &lt;/&gt;
+        </div>
 
-    <p>
-        I am a technology professional interested in
-        software development, cloud computing,
-        databases and modern technologies.
-    </p>
+        <div class="loader-bar">
+            <span></span>
+        </div>
 
-    <h2>Skills</h2>
+        <p>Initializing portfolio...</p>
 
-    <ul>
-        <li>Python</li>
-        <li>Java</li>
-        <li>Spring Boot</li>
-        <li>Oracle</li>
-        <li>SQL</li>
-        <li>Docker</li>
-        <li>Kubernetes</li>
-        <li>Linux</li>
-    </ul>
+    </div>
 
-    <h2>Projects</h2>
+</div>
 
-    <p>My projects will be added here.</p>
 
-    <h2>Contact</h2>
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
 
-    <p>
-        Email: your-email@example.com
-    </p>
+<canvas id="particleCanvas"></canvas>
+
+<div class="background-grid"></div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            <span>&lt;</span>
+            YN
+            <span>/&gt;</span>
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="#home" class="nav-link active">
+                Home
+            </a>
+
+            <a href="#about" class="nav-link">
+                About
+            </a>
+
+            <a href="#skills" class="nav-link">
+                Skills
+            </a>
+
+            <a href="#experience" class="nav-link">
+                Experience
+            </a>
+
+            <a href="#projects" class="nav-link">
+                Projects
+            </a>
+
+            <a href="#contact" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button id="themeToggle"
+                    class="icon-button"
+                    aria-label="Toggle theme">
+
+                <i class="fas fa-moon"></i>
+
+            </button>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open menu">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section id="home" class="hero">
+
+    <div class="hero-container">
+
+        <div class="hero-content reveal">
+
+            <p class="hero-intro">
+                Hello, I'm
+            </p>
+
+            <h1>
+                Your <span>Name</span>
+            </h1>
+
+            <div class="typing-container">
+
+                <span>I am a </span>
+
+                <span id="typingText"></span>
+
+                <span class="cursor">|</span>
+
+            </div>
+
+            <p class="hero-description">
+
+                I build scalable applications, explore modern
+                technologies and enjoy solving challenging
+                engineering problems.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects"
+                   class="btn btn-primary">
+
+                    View My Work
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+                <a href="#contact"
+                   class="btn btn-outline">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+            <div class="social-links">
+
+                <a href="https://github.com/"
+                   target="_blank"
+                   aria-label="GitHub">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+                <a href="https://linkedin.com/"
+                   target="_blank"
+                   aria-label="LinkedIn">
+
+                    <i class="fab fa-linkedin"></i>
+
+                </a>
+
+                <a href="mailto:your@email.com"
+                   aria-label="Email">
+
+                    <i class="fas fa-envelope"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Hero visual -->
+
+        <div class="hero-visual reveal">
+
+            <div class="code-window">
+
+                <div class="window-header">
+
+                    <div class="window-dots">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                    <p>developer.js</p>
+
+                </div>
+
+                <div class="code-body">
+
+<pre><code>
+<span class="code-purple">const</span>
+<span class="code-blue">developer</span> = {
+
+    name:
+    <span class="code-green">"Your Name"</span>,
+
+    role:
+    <span class="code-green">"Software Developer"</span>,
+
+    skills: [
+
+        <span class="code-green">"Java"</span>,
+        <span class="code-green">"Python"</span>,
+        <span class="code-green">"Spring Boot"</span>,
+        <span class="code-green">"Docker"</span>,
+        <span class="code-green">"Kubernetes"</span>
+
+    ],
+
+    passion:
+    <span class="code-green">"Building"</span>
+
+};
+</code></pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <a href="#about" class="scroll-indicator">
+
+        <span>Scroll to explore</span>
+
+        <i class="fas fa-chevron-down"></i>
+
+    </a>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about" class="section">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-number">
+                01.
+            </span>
+
+            <h2>About Me</h2>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-image reveal">
+
+                <div class="image-wrapper">
+
+                    <img src="assets/profile.jpg"
+                         alt="Your Name">
+
+                    <div class="image-border"></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-content reveal">
+
+                <h3>
+                    Turning ideas into
+                    <span>working systems.</span>
+                </h3>
+
+                <p>
+                    Write your introduction here. Talk about
+                    who you are, what you do, your background,
+                    and what you enjoy building.
+                </p>
+
+                <p>
+                    You can also mention your professional
+                    experience, technologies you work with,
+                    and areas you are currently exploring.
+                </p>
+
+                <div class="about-stats">
+
+                    <div class="stat">
+
+                        <strong>05+</strong>
+
+                        <span>
+                            Years Experience
+                        </span>
+
+                    </div>
+
+                    <div class="stat">
+
+                        <strong>20+</strong>
+
+                        <span>
+                            Projects
+                        </span>
+
+                    </div>
+
+                    <div class="stat">
+
+                        <strong>10+</strong>
+
+                        <span>
+                            Technologies
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <a href="assets/resume.pdf"
+                   class="btn btn-primary"
+                   target="_blank">
+
+                    Download Resume
+
+                    <i class="fas fa-download"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section id="skills" class="section section-alt">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-number">
+                02.
+            </span>
+
+            <h2>Technical Skills</h2>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            <!-- Skill -->
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+
+                    <i class="fab fa-java"></i>
+
+                </div>
+
+                <h3>Java</h3>
+
+                <p>
+                    Backend development and enterprise applications.
+                </p>
+
+                <div class="skill-progress">
+
+                    <span style="width: 90%"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+
+                    <i class="fab fa-python"></i>
+
+                </div>
+
+                <h3>Python</h3>
+
+                <p>
+                    APIs, automation, scripting and applications.
+                </p>
+
+                <div class="skill-progress">
+
+                    <span style="width: 88%"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+
+                    <i class="fas fa-leaf"></i>
+
+                </div>
+
+                <h3>Spring Boot</h3>
+
+                <p>
+                    REST APIs and backend services.
+                </p>
+
+                <div class="skill-progress">
+
+                    <span style="width: 85%"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+
+                    <i class="fas fa-database"></i>
+
+                </div>
+
+                <h3>Oracle / SQL</h3>
+
+                <p>
+                    Database development and SQL.
+                </p>
+
+                <div class="skill-progress">
+
+                    <span style="width: 85%"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+
+                    <i class="fab fa-docker"></i>
+
+                </div>
+
+                <h3>Docker</h3>
+
+                <p>
+                    Containerization and application deployment.
+                </p>
+
+                <div class="skill-progress">
+
+                    <span style="width: 75%"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+
+                    <i class="fas fa-dharmachakra"></i>
+
+                </div>
+
+                <h3>Kubernetes</h3>
+
+                <p>
+                    Container orchestration and cloud-native systems.
+                </p>
+
+                <div class="skill-progress">
+
+                    <span style="width: 70%"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section id="experience" class="section">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-number">
+                03.
+            </span>
+
+            <h2>Experience</h2>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="timeline-date">
+                        2024 — Present
+                    </span>
+
+                    <h3>
+                        Your Current Position
+                    </h3>
+
+                    <h4>
+                        Your Organization
+                    </h4>
+
+                    <p>
+                        Add your responsibilities,
+                        achievements and technologies
+                        here.
+                    </p>
+
+                    <div class="tech-tags">
+
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>Oracle</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="timeline-date">
+                        2022 — 2024
+                    </span>
+
+                    <h3>
+                        Previous Position
+                    </h3>
+
+                    <h4>
+                        Previous Organization
+                    </h4>
+
+                    <p>
+                        Add your previous experience
+                        here.
+                    </p>
+
+                    <div class="tech-tags">
+
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>SQL</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects" class="section section-alt">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-number">
+                04.
+            </span>
+
+            <h2>Featured Projects</h2>
+
+            <div class="heading-line"></div>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-top">
+
+                    <i class="far fa-folder-open folder-icon"></i>
+
+                    <div>
+
+                        <a href="#"
+                           aria-label="GitHub">
+
+                            <i class="fab fa-github"></i>
+
+                        </a>
+
+                        <a href="#"
+                           aria-label="Live project">
+
+                            <i class="fas fa-external-link-alt"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    Project Name
+                </h3>
+
+                <p>
+                    Describe your project here.
+                    Explain the problem it solves and
+                    what you built.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Oracle</span>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-top">
+
+                    <i class="far fa-folder-open folder-icon"></i>
+
+                    <div>
+
+                        <a href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    AI / ML Project
+                </h3>
+
+                <p>
+                    Add your AI or machine learning
+                    project description here.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>Python</span>
+                    <span>TensorFlow</span>
+                    <span>FastAPI</span>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-top">
+
+                    <i class="far fa-folder-open folder-icon"></i>
+
+                    <div>
+
+                        <a href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    Cloud Native Application
+                </h3>
+
+                <p>
+                    Describe your Docker,
+                    Kubernetes or cloud project here.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>Linux</span>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 4 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-top">
+
+                    <i class="far fa-folder-open folder-icon"></i>
+
+                    <div>
+
+                        <a href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <h3>
+                    Project Four
+                </h3>
+
+                <p>
+                    Add another project description.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>Python</span>
+                    <span>API</span>
+                    <span>SQL</span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact" class="section contact-section">
+
+    <div class="container">
+
+        <div class="contact-content reveal">
+
+            <span class="section-number">
+                05.
+            </span>
+
+            <h2>
+                Let's build something
+                <span>interesting.</span>
+            </h2>
+
+            <p>
+                Have an idea, project or opportunity?
+                Feel free to reach out.
+            </p>
+
+            <a href="mailto:your@email.com"
+               class="btn btn-primary">
+
+                Say Hello
+
+                <i class="fas fa-paper-plane"></i>
+
+            </a>
+
+            <div class="contact-socials">
+
+                <a href="#">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <p>
+            Designed & built by
+            <strong>Your Name</strong>
+        </p>
+
+        <p class="footer-code">
+            &lt;code /&gt;
+        </p>
+
+        <p>
+            © <span id="currentYear"></span>
+            All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button id="backToTop"
+        class="back-to-top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+<script src="script.js"></script>
 
 </body>
 
